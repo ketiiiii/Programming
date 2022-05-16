@@ -1,0 +1,17 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    --lightblue: #33DDEC;
+    --darkblue: #2D25FD;
+    --lightpurple: #9520E6;
+    --darkpruple: #58128A;
+    --pink: #F81D92;
+    --orange: #FD7429;
+    --yellow: #FDAA02;
+    --green: #9EF3B4;
+    --white: #F5F5F5;
+    --black: #111224;
+}
