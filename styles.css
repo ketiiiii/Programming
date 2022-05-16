@@ -1,6 +1,7 @@
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 :root{
@@ -14,4 +15,63 @@
     --green: #9EF3B4;
     --white: #F5F5F5;
     --black: #111224;
+    --textfont: "libre-franklin";
+    --headingfont: "termina";
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/background.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+nav{
+    height: 10%;
+    padding-top: 50px;
+    font-family:var(--textfont);
+    font-weight: 500;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--black);
+
+}
+
+.logoDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 80%;
+}
+
+.logoDesktop {
+    width: 1000px;
+}
+
+.mottoDesktop {
+    display: space-between;
 }
