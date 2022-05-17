@@ -130,7 +130,7 @@ li :hover {
 }
 
 .pic-who-we-are {
-    width: 400px;
+    width: 380px;
 }
 
 .right-who-we-are {
@@ -204,9 +204,9 @@ li :hover {
     background-repeat: no-repeat;
     background-color: var(--white);
 
-    text-align: center;
-    display: grid;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .our-mission h1 {
@@ -224,4 +224,24 @@ li :hover {
     font-family: var(--textfont);
     font-size:var(--textsize) ;
     color: var(--black);
+}
+
+.right-our-mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+}
+
+.left-our-mission {
+    width: 50%;
+    display: grid;
+    justify-content:center;
+    align-items: center;
+    text-align: left;
+}
+
+.pic-our-mission {
+    width: 500px;
 }
