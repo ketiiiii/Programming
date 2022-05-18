@@ -23,6 +23,8 @@ html {
     --headingfont: "termina";
     --textsize: 20px;
     --headingsize:50px;
+    --mobileheadingsize:30px;
+    --mobiletextsize:15px;
 
 }
 
@@ -91,10 +93,11 @@ li :hover {
 
 .motto-desktop {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
-    font-family:var(--textfont);
+    font-family:var(--headingfont);
     font-size: 20px;
+    font-weight: 600;
 }
 
 .some-desktop {
@@ -400,4 +403,298 @@ footer .mail {
 
 @media screen and (max-width: 480px) {
 
+    /*Header*/
+    .first-part {
+        background-image: url(images/mobile-background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: var(--white);
+        height: auto;
+    }
+
+    header {
+        height: 50vh;
+    }
+
+    .logo-div {
+        height: 50vh ;
+    }
+
+    
+    .logo-desktop {
+        width: 400px;
+    }
+
+    .logo-div img {
+        width: 320px;
+    }
+
+    .motto-desktop p {
+        font-size: 16px;
+    }
+
+    nav ul li {
+        display: none;
+    }
+
+    .some-desktop {
+        display: none;
+    }
+
+    .sticky-div {
+        position: fixed;
+        left: 270px;
+        top: 30px;
+    }
+
+    .sticky-div img {
+        width: 80px;
+    }
+
+    /*Section 1*/
+    .who-we-are {
+        display: block;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-who-we-are, .right-who-we-are {
+        width: 100%;
+    }
+
+    .pic-who-we-are {
+        width: 270px ;
+        margin-top: 80px;
+    }
+    
+    .right-who-we-are h1 {
+        margin-top: 60px;
+        font-size: var(--mobileheadingsize);
+    }
+    
+    .right-who-we-are p {
+        margin-top: 35px;
+        margin-bottom: 75px;
+        font-size: var(--mobiletextsize);
+    }
+
+    /*Section 2*/
+
+    .what-we-do {
+        height: 50vh;
+        background-image: none;
+    }
+
+    .what-we-do h1 {
+        font-size: var(--mobileheadingsize);
+    }
+
+    .what-we-do p {
+        font-size: var(--mobiletextsize);
+    }
+
+    /*Section 3*/
+
+    .our-mission {
+        background-image: url(images/mobile-our-mission-bg.png);
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: flex-end;
+        align-items:none ;
+        text-align: center;
+        height: 85vh;
+    }
+
+    .our-mission h1 {
+        font-size: var(--mobileheadingsize);
+        margin-bottom: 35px;
+    }
+
+    .our-mission p {
+        font-size: var(--mobiletextsize);
+    }
+    .pic-our-mission {
+        width: 330px;
+        margin-top: 100px;
+    }
+
+    .right-our-mission, .left-our-mission {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-our-mission{
+        margin-top: 80px;
+    }
+
+    /*Section 4*/
+
+    .some h1 {
+        font-size: var(--mobileheadingsize);
+    }
+
+    /*Section 5*/
+
+    .our-team h1 {
+        font-size: var(--mobileheadingsize);
+    }
+
+    .our-team h2 {
+        font-size: 14px;
+    }
+    
+    .our-team p {
+        font-size: var(--mobiletextsize);
+    }
+
+    .members-our-team {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    /*Footer*/
+
+    footer {
+        padding: 20px;
+    }
+
+    footer h1 {
+        font-size: 16px;
+    }
+    
+    footer p{
+        font-size: var(--mobiletextsize);
+    }
+
+    footer .links {
+        display: none;
+    }
+
+    footer .copyright {
+        margin-top: 40px;
+    }
+
+    /*NEWSLETTER*/
+
+    .newsletter-section{
+        
+    }
+
+    .newsletter-block {
+        top: 10px;
+        left: 1px;
+        width: auto;
+        height: auto;
+        background-image: url(images/mobile-newsletter-bg.png);
+    }
+
+    .close-button{
+        position: relative;
+        left: 200px;
+        right: -500px;
+    }
+    .newsletter-block h1{
+        font-size: 25px;
+    }
+
+    .newsletter-block h2 {
+        font-size: 15px;
+    }
+
+    #email {
+        display: block;
+    }
+
+    #submit-btn {
+        right: 0px;
+    }
+}
+
+
+
+/*POP UP NEWSLETTER*/  
+
+.newsletter-section{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top:0px;
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--white);
+}
+
+.newsletter-block {
+    position: relative;
+    top: 210px;
+    left: 330px;
+    width: 800px;
+    height: 400px;
+    padding: 50px;
+    padding-top: 30px;
+    background-color: var(--black);
+    background-image: url(images/pop-up-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 5px #0000001c;
+}
+
+.close-button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    position: relative;
+    left: 670px;
+}
+
+.newsletter-block h1 {
+    font-family: var(--headingfont);
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.newsletter-block h2 {
+    font-family: var(--textfont);
+    font-size: var(--textsize);
+    font-weight: 400;
+}
+
+#news-form div {
+    margin-top: 60px;
+}
+
+#email {
+    position: relative;
+    width: 250px;
+    height: 40px;
+    border-radius: 35px;
+    border: none;
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 17px;
+    font-family: var(--textfont);
+    font-weight: 400;
+    z-index: 1;
+}
+
+#submit-btn{
+    width: 150px;
+    height: 40px;
+    border-radius: 35px;
+    border: none;
+    padding: 10px;
+    padding-left: 25px;
+    font-size: 17px;
+    font-family: var(--textfont);
+    background-color: var(--lightpurple);
+    color: var(--white);
+    position: relative;
+    right: 35px;
+    z-index: 0;
+    cursor: pointer;
 }
