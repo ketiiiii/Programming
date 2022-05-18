@@ -1,5 +1,6 @@
 const newsletterSection = document.querySelector('.newsletter-section')
 const newsForm = document.getElementById('news-form')
+const newsLetterDiv = document.querySelector('.newsletter-center')
 const closeButton = document.querySelector ('.close-button')
 
 window.addEventListener('load', () => {
@@ -8,8 +9,8 @@ window.addEventListener('load', () => {
     },3000 );
 })
 
-newsletterSection.addEventListener('click', (e) => {
-    if (e.target == newsletterSection ) {
+newsLetterDiv.addEventListener('click', (e) => {
+    if (e.target == newsLetterDiv ) {
     newsletterSection.style.display = 'none';
     }
 } )

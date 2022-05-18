@@ -97,7 +97,7 @@ li :hover {
 
     font-family:var(--headingfont);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .some-desktop {
@@ -580,28 +580,30 @@ footer .mail {
     /*NEWSLETTER*/
 
     .newsletter-section{
-        
+        height: 100vh;
+        width: 100vw;
     }
 
     .newsletter-block {
-        top: 10px;
-        left: 1px;
-        width: auto;
-        height: auto;
-        background-image: url(images/mobile-newsletter-bg.png);
+        top: 0px !important;
+        left: 0px !important;
+        width: 90%!important;
+        height: 60% !important;
+        background-image: url(images/mobile-newsletter-bg.png) !important;
     }
 
     .close-button{
         position: relative;
-        left: 200px;
-        right: -500px;
+        left: 220px !important;
+        top: 0px !important;
     }
     .newsletter-block h1{
-        font-size: 25px;
+        font-size: 25px !important;
+        margin-top: 20px !important;
     }
 
     .newsletter-block h2 {
-        font-size: 15px;
+        font-size: 15px!important;
     }
 
     #email {
@@ -609,7 +611,8 @@ footer .mail {
     }
 
     #submit-btn {
-        right: 0px;
+       margin-top: 10px;
+       right: 0px !important;
     }
 }
 
@@ -627,10 +630,16 @@ footer .mail {
     color: var(--white);
 }
 
+.newsletter-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .newsletter-block {
     position: relative;
-    top: 210px;
-    left: 330px;
     width: 800px;
     height: 400px;
     padding: 50px;
@@ -650,6 +659,7 @@ footer .mail {
     cursor: pointer;
     position: relative;
     left: 670px;
+    top: 0px;
 }
 
 .newsletter-block h1 {
