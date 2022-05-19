@@ -33,6 +33,11 @@ body{
     height: 100%;
 }
 
+.wrapper {
+    word-wrap: break-word;
+    width: 500px;
+}
+
 /*Header*/
 
 .first-part{
@@ -121,12 +126,17 @@ li :hover {
     position: fixed;
     left:1260px;
     bottom: 50px;
+    -webkit-animation:heartbeat 2s ease-in-out 3s infinite both;
+    animation:heartbeat 2s ease-in-out 3s infinite both;
 }
+
+
 
 /*Animate sticky logo*/
 
 .sticky-div img{
     width: 105px;
+    
 }
 
 /* ----------------------------------------------
@@ -137,12 +147,37 @@ li :hover {
  * ---------------------------------------------- */
 
  .heartbeat{
-    -webkit-animation:heartbeat 2s ease-in-out 3s infinite both;
-    animation:heartbeat 2s ease-in-out 3s infinite both;
+
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    
  }
 
  @-webkit-keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}@keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}
 
+ @keyframes bgcolor {
+    0% {
+        filter: invert(6%) sepia(56%) saturate(916%) hue-rotate(203deg) brightness(89%) contrast(96%);
+    }
+
+    30% {
+        filter: invert(30%) sepia(86%) saturate(6153%) hue-rotate(315deg) brightness(101%) contrast(95%);
+    }
+
+    60% {
+        filter: invert(90%) sepia(98%) saturate(3208%) hue-rotate(127deg) brightness(100%) contrast(85%);
+    }
+
+    90% {
+        filter: invert(28%) sepia(92%) saturate(7480%) hue-rotate(274deg) brightness(94%) contrast(94%);
+    }
+
+    100% {
+        filter: invert(100%) sepia(41%) saturate(241%) hue-rotate(262deg) brightness(119%) contrast(92%);
+    }
+}
 /*Section 1*/
 
 .who-we-are {
@@ -202,6 +237,13 @@ li :hover {
 
     text-align: center;
     display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-longer {
+    word-wrap: break-word;
+    width: 800px;
     align-items: center;
 }
 
@@ -292,12 +334,13 @@ li :hover {
     width: 100%;
     height: 100vh;
 
-    display: flex;
+    display: grid;
     text-align: center;
     justify-content: center;
     align-items: center;
 
     background-color: var(--black);
+    z-index: 0;
 }
 
 .some h1 {
@@ -322,7 +365,8 @@ li :hover {
     color: var(--black);
     font-family: var(--headingfont);
     font-size: var(--headingsize);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-top: 20px;
 }
 
 .members-our-team h2 {
@@ -340,6 +384,56 @@ li :hover {
 .members-our-team {
     display: grid;
     grid-template-columns: auto auto auto;
+}
+
+.member-our-team img {
+    width: 250px ;
+}
+
+.some h2 {
+    font-family: var(--headingfont);
+    font-size: var(--textsize);
+    color: var(--white);
+}
+
+.page-email {
+    width: 600px;
+    height: 55px;
+    border-radius: 35px;
+    border: none;
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 17px;
+    font-family: var(--textfont);
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+}
+
+.page-btn{
+    display: inline-block;
+    width: 200px;
+    height: 55px;
+    border-radius: 35px;
+    border: none;
+    padding: 10px;
+    padding-left: 25px;
+    font-size: 17px;
+    
+    font-family: var(--textfont);
+    background-color: var(--lightpurple);
+    color: var(--white);
+    right: 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+.sign-up{
+text-align: left;
+}
+
+.sign-up div {
+    margin-top: 30px;
 }
 
 /*FOOTER*/
@@ -403,6 +497,10 @@ footer .mail {
 
 @media screen and (max-width: 480px) {
 
+    .wrapper {
+        width: 290px ;
+    }
+
     /*Header*/
     .first-part {
         background-image: url(images/mobile-background.png);
@@ -417,7 +515,8 @@ footer .mail {
     }
 
     .logo-div {
-        height: 50vh ;
+        height: 43vh ;
+        text-align: center;
     }
 
     
@@ -483,6 +582,10 @@ footer .mail {
 
     /*Section 2*/
 
+    .wrapper-longer {
+        width: 290px;
+    }
+
     .what-we-do {
         height: 50vh;
         background-image: none;
@@ -536,13 +639,34 @@ footer .mail {
         font-size: var(--mobileheadingsize);
     }
 
+    .sign-up {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: block;
+    }
+
+    .page-email {
+        width: 270px;
+    }
+
+    .page-btn {
+        width: 270px;
+        margin-top: 20px;
+        padding: 0px;
+        right: 0px;
+    }
+
     /*Section 5*/
 
     .our-team h1 {
+        padding-top: 60px;
+        margin-bottom: 20px;
         font-size: var(--mobileheadingsize);
     }
 
     .our-team h2 {
+        margin-top: -10px;
         font-size: 14px;
     }
     
@@ -553,6 +677,14 @@ footer .mail {
     .members-our-team {
         display: grid;
         grid-template-columns: auto auto;
+    }
+
+    .member-our-team {
+        margin-top:20px;
+    }
+
+    .member-our-team img {
+        width: 150px ;
     }
 
     /*Footer*/
@@ -597,6 +729,7 @@ footer .mail {
         left: 220px !important;
         top: 0px !important;
     }
+    
     .newsletter-block h1{
         font-size: 25px !important;
         margin-top: 20px !important;
@@ -608,6 +741,7 @@ footer .mail {
 
     #email {
         display: block;
+        width: 230px !important;
     }
 
     #submit-btn {
@@ -628,6 +762,7 @@ footer .mail {
     display: none;
     background-color: rgba(255, 255, 255, 0);
     color: var(--white);
+    z-index: 1;
 }
 
 .newsletter-center{
@@ -636,6 +771,7 @@ footer .mail {
     align-items: center;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .newsletter-block {
@@ -650,6 +786,7 @@ footer .mail {
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0px 0px 10px 5px #0000001c;
+    z-index: 2;
 }
 
 .close-button {
@@ -680,7 +817,7 @@ footer .mail {
 
 #email {
     position: relative;
-    width: 250px;
+    width: 350px;
     height: 40px;
     border-radius: 35px;
     border: none;
@@ -689,12 +826,11 @@ footer .mail {
     font-size: 17px;
     font-family: var(--textfont);
     font-weight: 400;
-    z-index: 1;
 }
 
 #submit-btn{
     width: 150px;
-    height: 40px;
+    height: 41px;
     border-radius: 35px;
     border: none;
     padding: 10px;
@@ -704,7 +840,6 @@ footer .mail {
     background-color: var(--lightpurple);
     color: var(--white);
     position: relative;
-    right: 35px;
-    z-index: 0;
+    right: 43px;
     cursor: pointer;
 }
