@@ -19,13 +19,15 @@
 
 <body>
 
-
+    <!-- NAV -->
     <div class="upper-part">
 
-        <a href="index.html"><div class="back">
-            <i class="fa-solid fa-angle-left fa-2x"></i>
-            <h2>Back</h2>
-        </div></a>
+        <a href="index.html">
+            <div class="back">
+                <i class="fa-solid fa-angle-left fa-2x"></i>
+                <h2>Back</h2>
+            </div>
+        </a>
 
         <div class="logo">
             <img src="images/globe.icon.png" alt="globe (network, connections) protolab logo ">
@@ -33,94 +35,99 @@
 
     </div>
 
+    <!-- JOIN US FORM -->
     <section class="mobile-wrapper">
 
-    <main>
+        <main>
 
-        <section>
+            <section>
 
-            <div class="title">
-                <h1>JOIN US</h1>
-            </div>
+                <div class="title">
+                    <h1>JOIN US</h1>
+                </div>
 
-            <div class="form">
-                <form id="info">
+                <div class="form">
+                    <form id="info">
 
-                    <div class="inputsss">
+                        <div class="inputsss">
 
-                        <div class="column1">
+                            <div class="column1">
 
-                            <div class="name">
-                                <h2>Full name: </h2>
-                                <input id="name" type="text" required>
+                                <div class="name">
+                                    <h2>Full name: </h2>
+                                    <input id="name" type="text" required>
+                                </div>
+
+                                <div class="email">
+                                    <h2>Email: </h2>
+                                    <input id="email" type="email" required>
+                                </div>
+
                             </div>
 
-                            <div class="email">
-                                <h2>Email: </h2>
-                                <input id="email" type="email" required>
+                            <div class="column2">
+
+                                <div class="number">
+                                    <h2> Phone number:</h2>
+                                    <input id="tel" type="tel" required>
+                                </div>
+
+                                <div class="team">
+                                    <h2>Desired team:</h2>
+
+                                    <select id="desiredTeam" required>
+                                        <option></option>
+                                        <option>Social Media</option>
+                                        <option>Video production</option>
+                                        <option>Graphic design</option>
+                                        <option>Event planning</option>
+                                    </select>
+
+                                </div>
+
                             </div>
 
                         </div>
 
-                        <div class="column2">
 
-                            <div class="number">
-                                <h2> Phone number:</h2>
-                                <input id="tel" type="tel" required>
-                            </div>
-
-                            <div class="team">
-                                <h2>Desired team:</h2>
-
-                                <select id="desiredTeam" required>
-                                <option></option>
-                                <option>Social Media</option>
-                                <option>Video production</option>
-                                <option>Graphic design</option>
-                                <option>Event planning</option>
-                                </select>
-                                
-                            </div>
-
+                        <div class="knap">
+                            <button>SEND</button>
                         </div>
 
-                    </div>
+                    </form>
+
+                </div>
 
 
-                    <div class="knap">
-                        <button>SEND</button>
-                    </div>
-
-                </form>
-
-            </div>
+            </section>
 
 
-        </section>
-
-
-    </main>
+        </main>
     </section>
 
+    <!--JAVASCRIPT-->
     <script>
+        //DECLARATING THE REFERENCE TO THE VALUES IN HTML
         const form = document.getElementById("info");
 
+        //WHEN FORM IS SUBMITTED IT WILL STORE THE VALUES FROM INPUTS AND REDIRECT TO THE NEXT PAGE
         form.addEventListener("submit", function (e) {
             e.preventDefault();
 
+            //DECLARATING THE REFERENCE TO THE VALUES IN HTML
             const name = document.getElementById("name");
             const email = document.getElementById("email");
             const number = document.getElementById("tel");
             const team = document.getElementById("desiredTeam");
 
+            //STORING THE VALUE FROM FORM INPUTS
             sessionStorage.setItem("name", name.value);
             sessionStorage.setItem("email", email.value);
             sessionStorage.setItem("tel", number.value);
             sessionStorage.setItem("desiredTeam", team.value);
 
-            document.location.href = "confirmation.html"; //Redicrects to the "Successfully Completed" page
-
-
+            //Redicrects to the "Successfully Completed" page
+            document.location.href = "confirmation.html"; 
 
         })
     </script>

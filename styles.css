@@ -70,6 +70,7 @@ ul{
 li{
     list-style-type: none;
     display: inline-block;
+    
 }
 
 li a {
@@ -112,10 +113,13 @@ li :hover {
     font-size: 20px;
     font-weight: 500;
     color: var(--black);
+    
 }
-
+ 
 .some-desktop a{
     cursor: pointer;
+    text-decoration: none;
+    color: var(--black);
 }
 
 .some-desktop :hover {
@@ -178,7 +182,7 @@ li :hover {
         filter: invert(100%) sepia(41%) saturate(241%) hue-rotate(262deg) brightness(119%) contrast(92%);
     }
 }
-/*Section 1*/
+/*Section 1 - WHO WE ARE*/
 
 .who-we-are {
     display: flex;
@@ -233,7 +237,7 @@ li :hover {
 
 
 
-/*Section 2*/
+/*Section 2 - WHAT WE DO*/
 
 .what-we-do{
     width: 100%;
@@ -284,7 +288,7 @@ li :hover {
     color: var(--lightblue);
 }
 
-/*Section 3*/
+/*Section 3 - OUR MISSION*/
 
 .our-mission {
     width: 100%;
@@ -337,7 +341,7 @@ li :hover {
     width: 500px;
 }
 
-/*Section 4*/
+/*Section 4 - SOME*/
 
 .some {
     width: 100%;
@@ -358,6 +362,8 @@ li :hover {
     font-size: var(--headingsize);
     margin-bottom: 20px;
 }
+
+/*Section 5 - OUR TEAM*/
 
 .our-team{
     width: 100%;
