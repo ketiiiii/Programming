@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join us!</title>
+    <link rel="stylesheet" href="mystyles.css">
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/ije7juu.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ije7juu.css">
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/c175bfafa2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+    <div class="upper-part">
+
+        <a href="index.html"><div class="back">
+            <i class="fa-solid fa-angle-left fa-2x"></i>
+            <h2>Back</h2>
+        </div></a>
+
+        <div class="logo">
+            <img src="images/globe.icon.png" alt="globe (network, connections) protolab logo ">
+        </div>
+
+    </div>
+
+    <section class="mobile-wrapper">
+
+    <main>
+
+        <section>
+
+            <div class="title">
+                <h1>JOIN US</h1>
+            </div>
+
+            <div class="form">
+                <form id="info">
+
+                    <div class="inputsss">
+
+                        <div class="column1">
+
+                            <div class="name">
+                                <h2>Full name: </h2>
+                                <input id="name" type="text" required>
+                            </div>
+
+                            <div class="email">
+                                <h2>Email: </h2>
+                                <input id="email" type="email" required>
+                            </div>
+
+                        </div>
+
+                        <div class="column2">
+
+                            <div class="number">
+                                <h2> Phone number:</h2>
+                                <input id="tel" type="tel" required>
+                            </div>
+
+                            <div class="team">
+                                <h2>Desired team:</h2>
+
+                                <select id="desiredTeam" required>
+                                <option></option>
+                                <option>Social Media</option>
+                                <option>Video production</option>
+                                <option>Graphic design</option>
+                                <option>Event planning</option>
+                                </select>
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="knap">
+                        <button>SEND</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+    </section>
+
+    <script>
+        const form = document.getElementById("info");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const number = document.getElementById("tel");
+            const team = document.getElementById("desiredTeam");
+
+            sessionStorage.setItem("name", name.value);
+            sessionStorage.setItem("email", email.value);
+            sessionStorage.setItem("tel", number.value);
+            sessionStorage.setItem("desiredTeam", team.value);
+
+            document.location.href = "confirmation.html"; //Redicrects to the "Successfully Completed" page
+
+
+
+        })
+    </script>
+
+
+</body>
+
+</html>

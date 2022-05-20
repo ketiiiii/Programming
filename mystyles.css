@@ -1,0 +1,220 @@
+* {
+    padding: Opx;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+
+
+body {
+    background-image: url(images/fish.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F5F5F5;
+}
+
+
+h2 {
+    font-size: 30px;
+    font-family: libre-franklin, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: #111224;
+}
+
+
+
+h3 {
+    color: #9520E6;
+    font-size: 30px;
+    font-family: libre-franklin, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.upper-part {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-part a {
+    text-decoration: none;
+}
+
+.back {
+    display: flex;
+    width: 200px;
+    margin-left: 30px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fa-angle-left {
+    margin-right: 20px;
+    color: #111224;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+main {
+    width: 70%;
+    height: auto;
+
+    background-color: #FFFFFF;
+
+    border-radius: 20px;
+
+    position: fixed;
+    top: 19%;
+    left: 15%;
+}
+
+
+/* section = main = form */
+
+section {
+    margin-top: 70px;
+}
+
+
+
+.title {
+    display: flex;
+    justify-content: center;
+
+    font-size: 30px;
+    font-family: termina, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.inputsss {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-top: 30px;
+}
+
+input {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 40px;
+    border: solid 2px #9520E6;
+
+    margin-bottom: 70px;
+}
+
+.knap {
+    display: flex;
+    justify-content: center;
+
+}
+
+button {
+    background-color: #9520E6;
+    color: #FFFFFF;
+    font-size: 30px;
+    width: 290px;
+    height: 60px;
+    border-radius: 40px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+
+.kindofinput{
+    width: 20rem;
+    height: 3rem;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    color: #9520E6;
+    font-size: 30px;
+    font-family: libre-franklin, sans-serif;
+    font-weight: 100;
+    font-style:bold;
+}
+
+select{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 40px;
+    border: solid 2px #9520E6;
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+    body {
+        background-image: url(images/bgjoinusmobile.png);
+        background-size: cover;
+    }
+
+    main {
+        width: 90%;
+
+        position: relative;
+
+        top: -30px;
+        left: 0px;
+
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        background-color: none;
+    }
+
+    .mobile-wrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inputsss {
+        display: block;
+    }
+
+    h2 {
+    font-size: 25px;
+    }
+
+    input, select {
+        width: 17rem;
+        margin-top: 5px;
+    }
+
+    button {
+        width: 270px;
+        margin-top: 50px;
+    }
+    
+    #name, #email, #tel, #team {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+       margin: 0px;
+       margin-top: -40px;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .upper-part {
+        margin-top: 40px;
+    }
+}

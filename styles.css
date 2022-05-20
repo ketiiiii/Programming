@@ -223,6 +223,15 @@ li :hover {
     font-size: var(--textsize);
 }
 
+.right-who-we-are p a {
+    color: var(--pink);
+}
+
+.right-who-we-are p a:hover {
+    text-decoration: none;
+}
+
+
 
 /*Section 2*/
 
