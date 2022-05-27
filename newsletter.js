@@ -3,7 +3,8 @@ const newsletterSection = document.querySelector('.newsletter-section')
 const newsForm = document.getElementById('news-form')
 const newsLetterDiv = document.querySelector('.newsletter-center')
 const closeButton = document.querySelector ('.close-button')
-const pageNewsForm = document.getElementById('page-submit')
+
+const textPop = document.querySelector('.text-pop')
 
 //SETS DELAY TIMEOUT LOAD OF THE POPUP NEWSLETTER
 window.addEventListener('load', () => {
@@ -32,10 +33,13 @@ closeButton.onclick = function(){
     newsletterSection.style.display = 'none';
 };
 
-//WHEN FORM IS SUBBMITED ALERT IS SHOWN AND FORM IS INPUT IS CLEARD
+//DECLARATING THE REFERENCE TO THE VALUES IN HTML
+const pageNewsForm = document.getElementById('page-submit')
+
+//WHEN FORM IS SUBBMITED TEXT IS SHOWN AND FORMS INPUT IS CLEARD
 pageNewsForm.addEventListener('submit', (e) =>{
     e.preventDefault();
     
-    alert("You have successfully singed up!")
+    textPop.style.display = 'block';
     pageNewsForm.reset()
 });

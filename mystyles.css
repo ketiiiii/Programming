@@ -47,10 +47,11 @@ h3 {
 
 .back {
     display: flex;
-    width: 200px;
+    width: auto;
     margin-left: 30px;
     align-items: center;
     cursor: pointer;
+    padding-top: 20px;
 }
 
 .fa-angle-left {
@@ -63,7 +64,7 @@ h3 {
     margin-right: 10px;
 }
 
-main {
+.div {
     width: 70%;
     height: auto;
 
@@ -76,7 +77,6 @@ main {
     left: 15%;
 }
 
-
 /* section = main = form */
 
 section {
@@ -86,13 +86,13 @@ section {
 
 
 .title {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 
     font-size: 30px;
     font-family: termina, sans-serif;
     font-weight: 700;
     font-style: normal;
+    padding-top: 20px;
 }
 
 .inputsss {
@@ -109,6 +109,9 @@ input {
     border: solid 2px #9520E6;
 
     margin-bottom: 70px;
+    font-size: 20px;
+    font-family: libre-franklin, sans-serif;
+    padding-left: 10px;
 }
 
 .knap {
@@ -146,6 +149,9 @@ select{
     height: 3rem;
     border-radius: 40px;
     border: solid 2px #9520E6;
+    font-size: 20px;
+    font-family: libre-franklin, sans-serif;
+    padding-left: 10px;
 }
 
 
@@ -155,11 +161,11 @@ select{
     body {
         background-image: url(images/bgjoinusmobile.png);
         background-size: cover;
+        height: 100vh;
     }
 
-    main {
+   .div {
         width: 90%;
-
         position: relative;
 
         top: -30px;
@@ -186,7 +192,7 @@ select{
     }
 
     h2 {
-    font-size: 25px;
+        font-size: 20px;
     }
 
     input, select {
@@ -206,6 +212,7 @@ select{
     h1 {
        margin: 0px;
        margin-top: -40px;
+       font-size: 20px;
     }
 
     .logo img {
@@ -213,6 +220,13 @@ select{
     }
 
     .upper-part {
-        margin-top: 40px;
+       padding-top: 40px;
+    }
+    .kindofinput{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .column3, .column4  {
+        margin-left: 50px;
     }
 }
