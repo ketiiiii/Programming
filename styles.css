@@ -112,8 +112,7 @@ li :hover {
     font-family:var(--textfont);
     font-size: 20px;
     font-weight: 500;
-    color: var(--black);
-    
+    color: var(--black); 
 }
  
 .some-desktop a{
@@ -126,20 +125,13 @@ li :hover {
     color: var(--lightpurple);
 }
 
-.sticky-div{
-    position: fixed;
-    width: 100%;
-    bottom: 30px;
-}
-
-
 
 /*Animate sticky logo*/
 
-.sticky-div img{
+.heartbeat  {
     width: 100px; 
-    margin-right: 10px;
     float: right;
+    margin-right: 10px;
     -webkit-animation: bgcolor 20s infinite;
     animation: bgcolor 10s infinite;
     -webkit-animation-direction: alternate;
@@ -153,6 +145,9 @@ li :hover {
     margin-right: 10px;
     -webkit-animation:heartbeat 1.5s ease-in-out 3s 6 both;
     animation:heartbeat 1.5s ease-in-out 3s 6 both;
+    position: fixed;
+    right: 0px;
+    bottom: 30px;
 }
 
  @-webkit-keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);
@@ -217,6 +212,11 @@ li :hover {
     height: auto;
     display: grid;
     justify-content: center;
+}
+
+.down-arrow a {
+    text-decoration: none;
+    color: var(--black);
 }
 
 .down-arrow p {
@@ -661,13 +661,13 @@ footer .mail {
         display: none;
     }
 
-    .sticky-div {
-        position: fixed;
-        top: 30px;
+    .heartbeat {
+        width: 80px;
     }
 
-    .sticky-div img {
-        width: 80px;
+    .holder{
+        bottom: none;
+        top: 20px;
     }
 
     .down-arrow {
